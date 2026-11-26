@@ -1,0 +1,492 @@
+/* =========================================
+   STOKFLOW - LAPORAN
+========================================= */
+
+.rp-page {
+    color: #1e293b;
+}
+
+.rp-page .panel {
+    margin-bottom: 22px;
+}
+
+/* Header panel */
+
+.rp-page .rp-panel-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 24px;
+}
+
+.rp-panel-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.rp-panel-header p {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 6px;
+}
+
+/* Navigasi jenis laporan */
+
+.rp-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rp-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.rp-tab:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.rp-tab.rp-active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+/* Form filter */
+
+.rp-filter {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    align-items: end;
+}
+
+.rp-filter .form-group {
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+.rp-filter label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rp-filter .form-control {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.rp-filter-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Informasi laporan */
+
+.rp-meta {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 20px 28px;
+    padding: 20px;
+    margin-bottom: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.rp-meta > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.rp-meta span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.rp-meta strong {
+    font-size: 14px;
+    color: #1e293b;
+    overflow-wrap: anywhere;
+}
+
+/* Tabel laporan */
+
+.rp-page .table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.rp-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rp-page .rp-table th {
+    padding: 14px 12px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.rp-page .rp-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.rp-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.rp-page .rp-number {
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.rp-page .rp-empty {
+    padding: 30px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* Status */
+
+.rp-status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.rp-status-success {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.rp-status-process {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+.rp-status-danger {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+/* Ringkasan laporan stok */
+
+.rp-summary-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.rp-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 9px;
+}
+
+.rp-summary-item span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.rp-summary-item strong {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.rp-green {
+    color: #16a34a;
+}
+
+.rp-red {
+    color: #dc2626;
+}
+
+/* Ringkasan nominal */
+
+.rp-total-box {
+    max-width: 400px;
+    width: 100%;
+    margin: 24px 0 0 auto;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.rp-total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.rp-total-row span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.rp-grand-total {
+    border-top: 1px solid #cbd5e1;
+    margin-top: 8px;
+    padding-top: 16px;
+}
+
+.rp-grand-total strong {
+    font-size: 22px;
+    color: #2563eb;
+    white-space: nowrap;
+}
+
+/* Catatan */
+
+.rp-note {
+    margin-top: 20px;
+    padding: 14px 16px;
+    color: #475569;
+    background: #f8fafc;
+    border-left: 3px solid #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Elemen khusus cetak */
+
+.rp-print-heading,
+.rp-print-footer {
+    display: none;
+}
+
+/* Responsif */
+
+@media (max-width: 900px) {
+
+    .rp-summary-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .rp-meta,
+    .rp-summary-grid,
+    .rp-filter {
+        grid-template-columns: 1fr;
+    }
+
+    .rp-page .rp-panel-header {
+        padding: 16px;
+    }
+
+    .rp-tab {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .rp-grand-total strong {
+        font-size: 18px;
+    }
+
+}
+
+/* =========================================
+   PENGATURAN CETAK LAPORAN
+========================================= */
+
+@page {
+    size: A4 landscape;
+    margin: 12mm;
+}
+
+@media print {
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        height: auto !important;
+        overflow: visible !important;
+        color: #000000 !important;
+    }
+
+    .sidebar,
+    .topbar,
+    .main-footer,
+    .rp-no-print {
+        display: none !important;
+    }
+
+    .app-layout,
+    .main-content,
+    .content {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        position: static !important;
+    }
+
+    .rp-page {
+        width: 100%;
+    }
+
+    .rp-page .rp-report {
+        border: none !important;
+        box-shadow: none !important;
+        background: #ffffff !important;
+        margin: 0 !important;
+    }
+
+    .rp-report .panel-body {
+        padding: 0 !important;
+    }
+
+    .rp-print-heading {
+        display: block;
+        text-align: center;
+        border-bottom: 2px solid #333333;
+        padding-bottom: 18px;
+        margin-bottom: 20px;
+    }
+
+    .rp-print-heading h1 {
+        font-size: 24pt;
+        margin: 0 0 6px;
+    }
+
+    .rp-print-heading p {
+        font-size: 11pt;
+        margin: 0;
+    }
+
+    .rp-print-heading h2 {
+        font-size: 16pt;
+        margin: 15px 0 0;
+    }
+
+    .rp-meta {
+        background: #ffffff !important;
+        border: none;
+        padding: 0;
+        margin-bottom: 18px;
+        gap: 12px;
+    }
+
+    .rp-meta span,
+    .rp-meta strong {
+        font-size: 10pt;
+        color: #000000;
+    }
+
+    .rp-page .table-responsive {
+        overflow: visible !important;
+    }
+
+    .rp-table {
+        width: 100% !important;
+    }
+
+    .rp-page .rp-table th,
+    .rp-page .rp-table td {
+        border: 1px solid #999999;
+        padding: 7px;
+        font-size: 9pt;
+        color: #000000;
+    }
+
+    .rp-page .rp-table th {
+        background: #eeeeee !important;
+    }
+
+    .rp-table thead {
+        display: table-header-group;
+    }
+
+    .rp-table tr {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .rp-status {
+        background: transparent !important;
+        color: #000000 !important;
+        padding: 0;
+        font-size: 9pt;
+    }
+
+    .rp-summary-grid,
+    .rp-total-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .rp-summary-item,
+    .rp-total-box,
+    .rp-note {
+        background: #ffffff !important;
+    }
+
+    .rp-grand-total strong,
+    .rp-green,
+    .rp-red {
+        color: #000000 !important;
+    }
+
+    .rp-print-footer {
+        display: block;
+        margin-top: 24px;
+        padding-top: 12px;
+        border-top: 1px solid #999999;
+        font-size: 9pt;
+        text-align: center;
+    }
+
+}
